@@ -65,14 +65,14 @@
     padding: 50px;
     border-radius: 22px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.12);
+    box-shadow: 0 0 30px palevioletred;
     transition: 0.4s;
     animation: fadeUp 1s ease;
 }
 
 .contact-form:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(56, 189, 248, 0.18);
+    box-shadow: 0 20px 45px pink;
 }
 
 .contact-form form {

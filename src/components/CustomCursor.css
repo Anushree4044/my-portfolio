@@ -1,27 +1,56 @@
+/* 1. The small center dot */
+
 .cursor-dot {
-    width: 20px;
-    height: 20px;
-    background: #E11D48 !important;
+    width: 8px;
+    height: 8px;
+    background: #db2777;
+    /* Main pink theme */
     border-radius: 50%;
     position: fixed;
+    pointer-events: none;
+    z-index: 10000;
     transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
-    mix-blend-mode: difference;
-    /* THE TRIPLE FIX */
-    pointer-events: none !important;
-    /* Forces click-through */
-    user-select: none !important;
-    /* Prevents text selection issues */
-    z-index: 999999 !important;
-    /* Ensures it is on top visually but mechanically invisible */
+    transition: width 0.2s, height 0.2s;
 }
 
+
+/* 2. The larger trailing circle (the "outline") */
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #db2777;
+    /* Pink outline */
+    background: rgba(219, 39, 119, 0.1);
+    /* Very faint pink center */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    /* Smooth movement delay for the trailing effect */
+    transition: transform 0.15s ease-out, width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+
+/* 3. Hover state for buttons */
+
 .cursor-hover {
-    width: 60px;
-    height: 60px;
-    background: white !important;
-    opacity: 0.5 !important;
-    pointer-events: none !important;
+    width: 70px;
+    height: 70px;
+    background: rgba(219, 39, 119, 0.2);
+    border: 1px solid #db2777;
+    opacity: 0.5;
+}
+
+
+/* Ensure your Hero and Text containers have a z-index to stay in front */
+
+.hero,
+.hero-content,
+.project-card {
+    position: relative;
+    z-index: 1;
 }
 
 

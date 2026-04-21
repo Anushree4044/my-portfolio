@@ -30,7 +30,7 @@ function Footer() {
         </div>
         <div className="footer-divider"></div>
         <p className="copyright">
-          © {currentYear} <span>Anu Shree</span>. Built with Passion.
+          © {currentYear} <span>AnuShree</span>. Built with Passion.
         </p>
       </div>
     </footer>

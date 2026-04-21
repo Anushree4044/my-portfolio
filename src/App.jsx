@@ -1,4 +1,4 @@
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 import Navbar from "./components/Navbar";
@@ -10,18 +10,19 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop/BackToTop";
 import CursorGlow from "./components/CursorGlow";
-import CustomCursor from "./components/CustomCursor"
+import CustomCursor from "./components/CustomCursor";
 import PreLoader from "./components/PreLoader";
+
 function App() {
   const [loaded, setLoaded] = useState(false);
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setLoaded(true);
-  }, 700);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 700);
+    return () => clearTimeout(timer);
+  }, []);
 
-  return () => clearTimeout(timer);
-}, []);
   useEffect(() => {
     ScrollReveal().reveal(
       ".hero, .about, .projects, .skills, .contact, .footer",
@@ -35,44 +36,35 @@ useEffect(() => {
       }
     );
   }, []);
-// import CustomCursor from "./components/CustomCursor"; 
 
-function App() {
-  return (
-    <div className="App">
-      {/* <CustomCursor /> */}
-      <Navbar />
-      <Hero />
-      {/* ...rest of components */}
-    </div>
-  );
-}
   return (
     <>
-    {!loaded && (
-  <div className="loader-screen">
-    <h1 className="loader-logo">Anu shree</h1>
-    <p className="loader-text">Loading Portfolio...</p>
-  </div>
-)}
-    <div className={loaded ? "page-show" : "page-hide"}></div>
-    <div className="particles"></div>
-    <div className="bg-orbs"></div>
-    // BAD: If the cursor wrapper doesn't have pointer-events: none
-<div className="cursor-wrapper">
-   <CustomCursor />
-   <App />
-</div>
-    <PreLoader />
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-      <BackToTop />
-      <CursorGlow />
+      {!loaded && (
+        <div className="loader-screen">
+          <h1 className="loader-logo">Anushree</h1>
+          <p className="loader-text">Loading Portfolio...</p>
+        </div>
+      )}
+
+      {/* Put the cursor OUTSIDE any wrappers so it doesn't block clicks */}
+      <CustomCursor />
+      
+      <div className={loaded ? "page-show" : "page-hide"}>
+        <PreLoader />
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+        <BackToTop />
+        <CursorGlow />
+        
+        {/* Background elements */}
+        <div className="particles"></div>
+        <div className="bg-orbs"></div>
+      </div>
     </>
   );
 }

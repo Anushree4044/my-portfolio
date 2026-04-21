@@ -25,12 +25,14 @@
     flex-direction: column;
     height: 100%;
     transition: 0.35s ease;
-    border: 1px solid rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(219, 39, 119, 0.08);
+    /* Updated to Pink */
 }
 
 .project-card:hover {
     transform: translateY(-12px) scale(1.01);
-    box-shadow: 0 22px 45px rgba(56, 189, 248, 0.18);
+    box-shadow: 0 22px 45px rgba(219, 39, 119, 0.18);
+    /* Updated to Pink */
 }
 
 .project-card img {
@@ -62,8 +64,10 @@
 }
 
 .badges span {
-    background: #0f172a;
-    color: #38bdf8;
+    background: #4c0519;
+    /* Deep Maroon background */
+    color: #f472b6;
+    /* Light Pink text */
     padding: 7px 12px;
     border-radius: 30px;
     font-size: 13px;
@@ -82,7 +86,10 @@
     padding: 12px;
     border-radius: 10px;
     font-weight: 700;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
+    /* Ensure smooth transition for all properties */
+    position: relative;
+    overflow: hidden;
 }
 
 .project-buttons a:hover {
@@ -91,13 +98,50 @@
 }
 
 .project-buttons a:first-child {
-    background: #38bdf8;
+    background: #db2777;
+    /* Main Pink Button */
     color: white;
 }
 
 .project-buttons a:last-child {
-    background: #0f172a;
+    background: #4c0519;
+    /* Deep Maroon Button */
     color: white;
+}
+
+.project-buttons a:first-child:hover {
+    background: #be185d;
+    /* Darker pink matches main button hover */
+    transform: translateY(-5px);
+    /* Lift animation from hero buttons */
+    box-shadow: 0 10px 20px rgba(219, 39, 119, 0.4);
+    filter: brightness(1.1);
+}
+
+
+/* Secondary Link (GitHub) Hover */
+
+.project-buttons a:last-child:hover {
+    background: #831843;
+    /* Slightly lighter maroon */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+.project-buttons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.project-buttons a:hover::before {
+    left: 100%;
 }
 
 .project-buttons a:hover {
@@ -119,7 +163,8 @@
 
 .project-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.18);
+    box-shadow: 0 20px 40px rgba(219, 39, 119, 0.18);
+    /* Pink glow */
 }
 
 .project-card img {
@@ -209,13 +254,13 @@
     max-width: 95%;
     max-height: 92vh;
     border-radius: 18px;
-    box-shadow: 0 0 40px rgba(56, 189, 248, 0.18);
+    box-shadow: 0 0 40px rgba(219, 39, 119, 0.18);
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(219, 39, 119, 0.08);
 }
 
 .project-card::before {
@@ -224,7 +269,7 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient( 135deg, rgba(56, 189, 248, 0.45), rgba(139, 92, 246, 0.28), rgba(56, 189, 248, 0.18));
+    background: linear-gradient( 135deg, rgba(219, 39, 119, 0.45), rgba(139, 92, 246, 0.28), rgba(219, 39, 119, 0.18));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     mask: lineat-gradient;
     -webkit-mask-composite: xor;
@@ -237,12 +282,12 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient( circle at top right, rgba(56, 189, 248, 0.08), transparent 45%);
+    background: radial-gradient( circle at top right, rgba(219, 39, 119, 0.08), transparent 45%);
     pointer-events: none;
 }
 
 .project-card:hover {
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 28px rgba(56, 189, 248, 0.12);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 28px rgba(219, 39, 119, 0.12);
 }
 
 .project-card:hover::before {
@@ -278,7 +323,7 @@
     width: 0%;
     height: 2px;
     border-radius: 20px;
-    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    background: linear-gradient(90deg, #db2777, #be185d);
     transition: width 0.7s ease;
 }
 
@@ -300,7 +345,7 @@
     width: 0;
     height: 2px;
     border-radius: 999px;
-    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    background: linear-gradient(90deg, #db2777, #be185d);
     transition: width 0.7s ease;
 }
 
@@ -358,7 +403,7 @@
     left: var(--x, 50%);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient( circle, rgba(56, 189, 248, 0.16), transparent 65%);
+    background: radial-gradient( circle, rgba(219, 39, 119, 0.16), transparent 65%);
     opacity: 0;
     transition: opacity 0.35s ease;
     pointer-events: none;
@@ -420,8 +465,8 @@
 
 .project-arrows button:hover {
     transform: translateY(-3px);
-    background: #38bdf8;
-    color: #0f172a;
+    background: #db2777;
+    color: white;
 }
 
 .projects {
@@ -536,8 +581,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(56, 189, 248, 0.2);
-    /* Your accent color with transparency */
+    background: rgba(219, 39, 119, 0.2);
+    /* Pink accent color with transparency */
     backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;

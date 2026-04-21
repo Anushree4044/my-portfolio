@@ -32,7 +32,7 @@ function Hero() {
       <div className="hero-left">
         <div className="status-badge">🟢 Available for Work</div>
         <h3>Hello, I'm</h3>
-        <h1>Anu Shree</h1>
+        <h1>AnuShree</h1>
         <h2>
           I'm a <span>{text}<span className="cursor">|</span></span>
         </h2>
@@ -49,7 +49,7 @@ function Hero() {
     {/* Right Column Wrapper */}
     <div className="hero-right reveal-right">
       <div className="image-container">
-        <img src={profile} alt="Anu Shree" fetchPriority="high" />
+        <img src={profile} alt="AnuShree" fetchPriority="high" />
       </div>
     </div>
   </section>

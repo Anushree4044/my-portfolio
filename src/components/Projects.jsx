@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import portfolio from "../assets/portfolio1.jpeg";
-import expense from "../assets/expense.jpeg";
+
 import emotion from "../assets/emotion-detection.jpeg";
 
 function Projects() {

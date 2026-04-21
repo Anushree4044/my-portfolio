@@ -124,7 +124,7 @@
 
 .contact-form button:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
+    box-shadow: 0 12px 25px palevioletred;
     letter-spacing: 1px;
 }
 
@@ -134,7 +134,7 @@
 .success-msg {
     margin-top: 12px;
     text-align: center;
-    color: #38bdf8;
+    color: #db2777;
     font-size: 14px;
     font-weight: 600;
 }
@@ -144,7 +144,7 @@
     top: 30px;
     right: -400px;
     background: #1e293b;
-    border-left: 5px solid #38bdf8;
+    border-left: 5px solid palevioletred;
     padding: 16px 25px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);

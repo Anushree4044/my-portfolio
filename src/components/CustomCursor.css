@@ -1,39 +1,36 @@
 .cursor-dot {
     width: 20px;
     height: 20px;
-    background: #38bdf8;
+    background: #E11D48 !important;
     border-radius: 50%;
     position: fixed;
-    pointer-events: none;
-    z-index: 10000;
     transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
     mix-blend-mode: difference;
-    /* Makes it visible on all backgrounds */
+    /* THE TRIPLE FIX */
+    pointer-events: none !important;
+    /* Forces click-through */
+    user-select: none !important;
+    /* Prevents text selection issues */
+    z-index: 999999 !important;
+    /* Ensures it is on top visually but mechanically invisible */
 }
 
 .cursor-hover {
     width: 60px;
     height: 60px;
-    background: white;
-    opacity: 0.5;
+    background: white !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
 }
 
-@media (max-width: 768px) {
-    .cursor-dot {
-        display: none;
-    }
-    /* Hide on touch devices */
-}
+
+/* Ensure the custom cursor container isn't blocking either */
 
 .custom-cursor {
-    pointer-events: none;
-    /* This makes sure you can still click buttons through the dot */
-    z-index: 9999;
-}
-
-.cursor-dot {
-    pointer-events: none;
-    /* This is the secret to a smooth custom cursor */
-    z-index: 999;
+    pointer-events: none !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
 }

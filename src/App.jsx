@@ -58,8 +58,12 @@ function App() {
     <div className={loaded ? "page-show" : "page-hide"}></div>
     <div className="particles"></div>
     <div className="bg-orbs"></div>
+    // BAD: If the cursor wrapper doesn't have pointer-events: none
+<div className="cursor-wrapper">
+   <CustomCursor />
+   <App />
+</div>
     <PreLoader />
-    <CustomCursor />
       <Navbar />
       <Hero />
       <About />

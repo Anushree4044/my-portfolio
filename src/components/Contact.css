@@ -12,7 +12,7 @@
 }
 
 .contact-title span {
-    color: #38bdf8;
+    color: rgb(197, 52, 76);
 }
 
 .contact-container {
@@ -57,8 +57,7 @@
 
 .contact-info div:hover {
     transform: translateX(8px);
-    background: rgba(56, 189, 248, 0.15);
-    border-color: #38bdf8;
+    border-color: #db2777;
 }
 
 .contact-form {

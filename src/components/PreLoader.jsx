@@ -19,7 +19,7 @@ function PreLoader() {
   return (
     <div className={`preloader ${fadeOut ? "fade-out" : ""}`}>
       <div className="loader-content">
-        <h1 className="loader-logo">Anu Shree</h1>
+        <h1 className="loader-logo">AnuShree</h1>
         <div className="loader-bar"></div>
       </div>
     </div>

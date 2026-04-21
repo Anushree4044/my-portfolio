@@ -17,8 +17,8 @@
 /* 2. The larger trailing circle (the "outline") */
 
 .cursor-outline {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #db2777;
     /* Pink outline */
     background: rgba(219, 39, 119, 0.1);

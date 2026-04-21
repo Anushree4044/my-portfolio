@@ -32,6 +32,7 @@ function CustomCursor() {
   <>
     <div className="cursor-dot" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div>
     <div className="cursor-outline" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div>
+    <div className="cursor-hover" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div>
   </>
 );
   //   // <div 

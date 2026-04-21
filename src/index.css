@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+/* 1. FINAL THEME VARIABLES: DARK MAROON */
+
+:root {
+    --bg: #1A0B0B;
+    /* Deep Maroon / Dark Wine */
+    --primary: #E11D48;
+    /* Rich Red / Crimson */
+    --accent: #FB7185;
+    /* Soft Rose Red */
+    --card: #2A1515;
+    /* Dark Maroon Card */
+    --text: #FFF5F5;
+    /* Soft White / Cream White */
+    --subtext: #E5B4B4;
+    /* Light Rose Gray */
+    --border: #7F1D1D;
+    /* Deep Red Border */
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* 2. GLOBAL RESET & BASE STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+}
+
+body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+
+/* 3. GLOBAL SECTION OVERRIDES (Forces Contact, About, & Footer) */
+
+section,
+#home,
+#about,
+#projects,
+#skills,
+#contact,
+.contact-section,
+footer {
+    background-color: var(--bg) !important;
+    background-image: none !important;
+    color: var(--text) !important;
+}
+
+
+/* 4. NAVBAR & NAVIGATION */
+
+nav,
+.navbar,
+header {
+    background-color: rgba(26, 11, 11, 0.95) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link,
+.navbar a {
+    color: var(--text) !important;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+
+/* 5. TYPOGRAPHY & HIGHLIGHTS */
+
+h1,
+h2,
+h3,
+h4,
+.section-title {
+    color: var(--text) !important;
+}
+
+
+/* Name: Anu Shree */
+
+h1 span,
+.hero-name,
+.highlight {
+    color: var(--primary) !important;
+    text-shadow: 0 0 15px rgba(225, 29, 72, 0.25);
+}
+
+
+/* Role: React Developer */
+
+.typewriter,
+.role-text,
+.accent-text {
+    color: var(--accent) !important;
+}
+
+p,
+.description,
+.sub-text {
+    color: var(--subtext) !important;
+}
+
+
+/* 6. CARDS & HOVER ANIMATIONS (Maintains your 170+ line logic) */
+
+.project-card,
+.skill-card,
+.about-card,
+.hero-left-container,
+.contact-card,
+.contact-info-item {
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 24px;
+    padding: 25px;
+    transition: var(--transition);
+}
+
+.project-card:hover,
+.skill-card:hover,
+.contact-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 7. CONTACT FORM & INPUTS (Force-Fix) */
+
+.contact-form input,
+.contact-form textarea,
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: #120707 !important;
+    /* Even darker maroon */
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary) !important;
+    outline: none;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.2);
+}
+
+
+/* 8. BUTTONS */
+
+.btn-primary,
+.resume-btn,
+.submit-btn,
+button[type="submit"] {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover,
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(225, 29, 72, 0.4);
+}
+
+.btn-outline {
+    border: 2px solid var(--accent) !important;
+    color: var(--accent) !important;
+    background: transparent !important;
+}
+
+.btn-outline:hover {
+    background: var(--accent) !important;
+    color: var(--bg) !important;
+}
+
+
+/* 9. FOOTER */
+
+footer {
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
+    background-color: #110707 !important;
+}
+
+
+/* 10. SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--card);
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+
+/* 1. Fix the Blue "Let's Work" Button */
+
+.btn-primary,
+.lets-work-btn {
+    background-color: var(--primary) !important;
+    /* Crimson Red */
+    border-color: var(--primary) !important;
+}
+
+
+/* 2. Fix the Blue "React Developer" Text */
+
+.typewriter,
+.role-text {
+    color: var(--accent) !important;
+    /* Peach Glow / Soft Rose */
+}
+
+
+/* 3. Hero Card Border (Optional but looks great) */
+
+.hero-left-container {
+    border: 1px solid rgba(225, 29, 72, 0.2) !important;
+    /* Subtle Red Glow border */
+    background: var(--card) !important;
+}

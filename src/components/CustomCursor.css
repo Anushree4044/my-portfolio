@@ -1,0 +1,39 @@
+.cursor-dot {
+    width: 20px;
+    height: 20px;
+    background: #38bdf8;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
+    mix-blend-mode: difference;
+    /* Makes it visible on all backgrounds */
+}
+
+.cursor-hover {
+    width: 60px;
+    height: 60px;
+    background: white;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .cursor-dot {
+        display: none;
+    }
+    /* Hide on touch devices */
+}
+
+.custom-cursor {
+    pointer-events: none;
+    /* This makes sure you can still click buttons through the dot */
+    z-index: 9999;
+}
+
+.cursor-dot {
+    pointer-events: none;
+    /* This is the secret to a smooth custom cursor */
+    z-index: 999;
+}

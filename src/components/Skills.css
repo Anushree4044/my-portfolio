@@ -25,7 +25,7 @@
     width: 90px;
     height: 3px;
     border-radius: 20px;
-    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    background: linear-gradient(90deg, pink, #db2777);
 }
 
 .skills-slider {

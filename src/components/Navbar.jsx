@@ -48,7 +48,7 @@ const toggleTheme = () => {
     <nav className="navbar">
   <div className="logo">
     <span className="logo-icon">A</span>
-    <span className="logo-text">nu Shree</span>
+    <span className="logo-text">nuShree</span>
   </div>
       <div
         className={`menu-icon ${isMenuOpen ? "open" : ""}`} 

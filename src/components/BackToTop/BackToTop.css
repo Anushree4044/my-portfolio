@@ -10,9 +10,9 @@
     font-weight: bold;
     cursor: pointer;
     z-index: 999;
-    background: #38bdf8;
-    color: #0f172a;
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+    background: #bf0f5e;
+    color: #bfbfbf ;
+    box-shadow: 0 5px 10px palevioletred;
     transition: 0.3s ease;
 }
 

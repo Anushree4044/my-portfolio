@@ -41,7 +41,7 @@ function Hero() {
         <div className="hero-buttons">
           <a href="mailto:anu042005as@gmail.com" target="_blank"><button>Let's Work</button></a>
           <a href="#projects"><button className="outline">Projects</button></a>
-          <a href="/anu-resume.pdf" download><button className="resume-btn">Resume</button></a>
+          <a href="/resume.pdf" download><button className="resume-btn">Resume</button></a>
         </div>
       </div>
     </div>

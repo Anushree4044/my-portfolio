@@ -5,7 +5,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socials = [
-    { id: 1, icon: "fab fa-github", link: "https://anushree4044.github.io", color: "#fff" },
+    { id: 1, icon: "fab fa-github", link: "https://github.com/anushree4044/my-portfolio.git", color: "#fff" },
     { id: 2, icon: "fab fa-linkedin-in", link: "https://linkedin.com/in/anushree-a-s-anu-9600a4324", color: "#0077b5" },
     { id: 3, icon: "fab fa-instagram", link: "https://instagram.com", color: "#e4405f" },
     { id: 4, icon: "fas fa-envelope", link: "mailto:anu042005as@gmail.com", color: "#38bdf8" },

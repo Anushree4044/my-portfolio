@@ -41,13 +41,9 @@ function Hero() {
         <div className="hero-buttons">
           <a href="mailto:anu042005as@gmail.com" target="_blank"><button>Let's Work</button></a>
           <a href="#projects"><button className="outline">Projects</button></a>
-<a
-  href="https://anushree4044.github.io/My-Portfolio/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
->
+<a href="./resume.pdf" target="_blank" rel="noopener noreferrer">
   <button className="resume-btn">Resume</button>
-</a>     </div>
+</a>        </div>
       </div>
     </div>
 
